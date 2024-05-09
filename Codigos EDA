@@ -1,0 +1,34 @@
+import pandas as pd
+import numpy as np
+import plotly.express as px
+import seaborn as sns
+import matplotlib.plyplot as plt
+import matplotlib.ticker as PercentFormatter
+
+print("Datos nulos:")
+print(df.isnull().sum())
+
+import pandas as pd
+df = pd.read_csv("/content/_ndice_de_informalidad_municipal._Diciembre_2019_20240424.csv")
+df
+
+from matplotlib import pyplot as plt
+_df_3['Informalidad'].plot(kind='hist', bins=20, title='Informalidad')
+plt.gca().spines[['top', 'right',]].set_visible(False)
+
+import plotly.express as px
+
+fig = px.pie(df, values='Informalidad', names='Departamento', color_discrete_sequence=px.colors.sequential.RdBu, hole = 0.5)
+fig.update_traces(marker = dict(line = dict(color = 'black', width = 2)))
+fig.show()
+
+from matplotlib import pyplot as plt
+df.plot(kind='scatter', x='Informalidad', y='Departamento', s=100, alpha=.6)
+plt.gca().spines[['top', 'right',]].set_visible(False)
+
+fig = px.scatter(df, x="Informalidad", y="Departamento")
+fig.update_traces(marker = dict(line = dict(color = 'black', width = .5)))
+fig.show()
+
+fig = px.box(df, x="Departamento", y="Informalidad")
+fig.show()
