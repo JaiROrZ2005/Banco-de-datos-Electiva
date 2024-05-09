@@ -1,0 +1,39 @@
+import pandas as pd
+import numpy as np
+import xlrd
+import seaborn as sb
+import matplotlib.plyplot as plt
+import matplotlib.ticker as PercentFormatter
+
+from google.colab import drive
+drive.mount("/content/drive"
+
+import pandas as pd
+df = pd.read_excel("/content/drive/MyDrive/GTAV_Steam_Reviews.xlsx")
+df.shape
+
+print("Los tipos de datos son:")
+print(df.dtypes)
+
+df.isnull().sum()
+
+df.head(100)
+
+import matplotlib.pyplot as plt
+
+plt.boxplot(df["author_playtime_forever"], vert=False)
+plt.show()
+
+
+import matplotlib.pyplot as plt
+
+plt.boxplot(df["author_playtime_last_two_weeks"], vert=False)
+plt.show()
+
+
+import matplotlib.pyplot as plt
+
+plt.boxplot(df["author_playtime_at_review"], vert=False)
+plt.show()
+
+
